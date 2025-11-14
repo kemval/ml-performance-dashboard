@@ -1,6 +1,6 @@
 # 📊 ML Model Performance & Drift Detection Dashboard
 
-(use it in light mode)
+(Set the interface to light mode by opening the three-dot menu in the top-right corner, navigating to Settings, and switching App Theme to Light).
 
 A professional-grade, production-ready dashboard for monitoring, benchmarking, and analyzing machine learning model performance with advanced drift detection capabilities. Built specifically to demonstrate comprehensive ML Operations capabilities for Moody's Analytics.
 
