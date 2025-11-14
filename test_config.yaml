@@ -1,0 +1,52 @@
+# ML Model Testing Configuration
+# Define thresholds and test parameters
+
+model_thresholds:
+  # Minimum acceptable performance metrics
+  accuracy:
+    minimum: 0.75
+    target: 0.85
+    excellent: 0.90
+  
+  precision:
+    minimum: 0.75
+    target: 0.85
+    excellent: 0.90
+  
+  recall:
+    minimum: 0.75
+    target: 0.85
+    excellent: 0.90
+  
+  f1_score:
+    minimum: 0.75
+    target: 0.85
+    excellent: 0.90
+  
+  loss:
+    maximum: 0.50
+    target: 0.30
+    excellent: 0.20
+  
+  inference_time_ms:
+    maximum: 200
+    target: 100
+    excellent: 50
+
+data_validation:
+  # Data quality checks
+  min_samples_per_evaluation: 1000
+  max_samples_per_evaluation: 100000
+  required_datasets: ['train', 'validation', 'test']
+  required_metrics: ['accuracy', 'precision', 'recall', 'f1_score']
+
+regression_tests:
+  # Check for performance degradation
+  max_acceptable_drop_percent: 5.0  # 5% drop triggers alert
+  min_evaluations_for_trend: 5
+
+integration_tests:
+  # Pipeline validation
+  data_file_path: 'data/model_results.json'
+  expected_models_count: 3  # At least 3 different models
+  date_range_days: 30  # At least 30 days of data

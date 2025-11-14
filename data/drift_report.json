@@ -1,0 +1,270 @@
+{
+  "drift_analysis": {
+    "analysis_timestamp": "2025-11-13T22:08:52.777054",
+    "reference_period": {
+      "start": "2025-09-14",
+      "end": "2025-10-14",
+      "samples": 15500
+    },
+    "production_period": {
+      "start": "2025-10-14",
+      "end": "2025-11-13",
+      "samples": 15500
+    },
+    "feature_drift": {
+      "credit_score": {
+        "feature_name": "credit_score",
+        "tests": {
+          "ks_test": {
+            "test": "Kolmogorov-Smirnov",
+            "statistic": 0.0736,
+            "p_value": 0.0,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          },
+          "psi": {
+            "test": "Population Stability Index",
+            "psi_value": 0.035,
+            "threshold": 0.1,
+            "drift_detected": false,
+            "severity": "none"
+          },
+          "chi_square": {
+            "test": "Chi-Square",
+            "statistic": 268.2155,
+            "p_value": 0.0,
+            "degrees_of_freedom": 9,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          }
+        },
+        "overall_drift_detected": true,
+        "drift_confidence": 0.6666666666666666,
+        "statistics": {
+          "reference_mean": 679.7851,
+          "production_mean": 693.6184,
+          "reference_std": 78.9137,
+          "production_std": 82.83,
+          "mean_shift_percent": 2.03
+        }
+      },
+      "loan_amount": {
+        "feature_name": "loan_amount",
+        "tests": {
+          "ks_test": {
+            "test": "Kolmogorov-Smirnov",
+            "statistic": 0.1448,
+            "p_value": 0.0,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          },
+          "psi": {
+            "test": "Population Stability Index",
+            "psi_value": 0.1518,
+            "threshold": 0.1,
+            "drift_detected": true,
+            "severity": "moderate"
+          },
+          "chi_square": {
+            "test": "Chi-Square",
+            "statistic": 1038.0129,
+            "p_value": 0.0,
+            "degrees_of_freedom": 9,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          }
+        },
+        "overall_drift_detected": true,
+        "drift_confidence": 1.0,
+        "statistics": {
+          "reference_mean": 50038.7278,
+          "production_mean": 57611.7092,
+          "reference_std": 20040.0815,
+          "production_std": 23236.887,
+          "mean_shift_percent": 15.13
+        }
+      },
+      "debt_to_income_ratio": {
+        "feature_name": "debt_to_income_ratio",
+        "tests": {
+          "ks_test": {
+            "test": "Kolmogorov-Smirnov",
+            "statistic": 0.1126,
+            "p_value": 0.0,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          },
+          "psi": {
+            "test": "Population Stability Index",
+            "psi_value": 0.0862,
+            "threshold": 0.1,
+            "drift_detected": false,
+            "severity": "none"
+          },
+          "chi_square": {
+            "test": "Chi-Square",
+            "statistic": 650.4319,
+            "p_value": 0.0,
+            "degrees_of_freedom": 9,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          }
+        },
+        "overall_drift_detected": true,
+        "drift_confidence": 0.6666666666666666,
+        "statistics": {
+          "reference_mean": 0.3496,
+          "production_mean": 0.3901,
+          "reference_std": 0.1476,
+          "production_std": 0.1656,
+          "mean_shift_percent": 11.59
+        }
+      },
+      "employment_length_years": {
+        "feature_name": "employment_length_years",
+        "tests": {
+          "ks_test": {
+            "test": "Kolmogorov-Smirnov",
+            "statistic": 0.0819,
+            "p_value": 0.0,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          },
+          "psi": {
+            "test": "Population Stability Index",
+            "psi_value": 0.0373,
+            "threshold": 0.1,
+            "drift_detected": false,
+            "severity": "none"
+          },
+          "chi_square": {
+            "test": "Chi-Square",
+            "statistic": 286.2264,
+            "p_value": 0.0,
+            "degrees_of_freedom": 9,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          }
+        },
+        "overall_drift_detected": true,
+        "drift_confidence": 0.6666666666666666,
+        "statistics": {
+          "reference_mean": 8.5458,
+          "production_mean": 7.6598,
+          "reference_std": 4.8057,
+          "production_std": 4.9384,
+          "mean_shift_percent": -10.37
+        }
+      },
+      "num_credit_lines": {
+        "feature_name": "num_credit_lines",
+        "tests": {
+          "ks_test": {
+            "test": "Kolmogorov-Smirnov",
+            "statistic": 0.144,
+            "p_value": 0.0,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          },
+          "psi": {
+            "test": "Population Stability Index",
+            "psi_value": 0.1505,
+            "threshold": 0.1,
+            "drift_detected": true,
+            "severity": "moderate"
+          },
+          "chi_square": {
+            "test": "Chi-Square",
+            "statistic": 1050.1784,
+            "p_value": 0.0,
+            "degrees_of_freedom": 9,
+            "threshold": 0.05,
+            "drift_detected": true,
+            "severity": "high"
+          }
+        },
+        "overall_drift_detected": true,
+        "drift_confidence": 1.0,
+        "statistics": {
+          "reference_mean": 9.5785,
+          "production_mean": 11.031,
+          "reference_std": 3.9204,
+          "production_std": 4.5331,
+          "mean_shift_percent": 15.16
+        }
+      }
+    },
+    "concept_drift": {
+      "test": "Concept Drift Detection",
+      "reference_approval_rate": 0.6504,
+      "production_approval_rate": 0.5783,
+      "change_percent": -11.08,
+      "p_value": 0.0,
+      "drift_detected": true,
+      "severity": "high"
+    },
+    "summary": {
+      "total_features_analyzed": 5,
+      "features_with_drift": 5,
+      "drift_percentage": 100.0
+    }
+  },
+  "alerts": [
+    {
+      "type": "feature_drift",
+      "severity": "high",
+      "feature": "credit_score",
+      "message": "Data drift detected in credit_score",
+      "mean_shift": 2.03,
+      "recommendation": "Urgent: Retrain model or adjust data pipeline"
+    },
+    {
+      "type": "feature_drift",
+      "severity": "high",
+      "feature": "loan_amount",
+      "message": "Data drift detected in loan_amount",
+      "mean_shift": 15.13,
+      "recommendation": "Urgent: Retrain model or adjust data pipeline"
+    },
+    {
+      "type": "feature_drift",
+      "severity": "high",
+      "feature": "debt_to_income_ratio",
+      "message": "Data drift detected in debt_to_income_ratio",
+      "mean_shift": 11.59,
+      "recommendation": "Urgent: Retrain model or adjust data pipeline"
+    },
+    {
+      "type": "feature_drift",
+      "severity": "high",
+      "feature": "employment_length_years",
+      "message": "Data drift detected in employment_length_years",
+      "mean_shift": -10.37,
+      "recommendation": "Urgent: Retrain model or adjust data pipeline"
+    },
+    {
+      "type": "feature_drift",
+      "severity": "high",
+      "feature": "num_credit_lines",
+      "message": "Data drift detected in num_credit_lines",
+      "mean_shift": 15.16,
+      "recommendation": "Urgent: Retrain model or adjust data pipeline"
+    },
+    {
+      "type": "concept_drift",
+      "severity": "high",
+      "message": "Concept drift detected: Approval rate changed by -11.1%",
+      "recommendation": "Model retraining recommended"
+    }
+  ],
+  "generated_at": "2025-11-13T22:08:52.838365"
+}
