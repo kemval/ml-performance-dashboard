@@ -60,7 +60,7 @@ ml-performance-dashboard/
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8+
+- Python 3.9+
 - pip package manager
 
 ### Installation
